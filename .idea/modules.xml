@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../AOOPpj1/AOOPpj1.iml" filepath="$PROJECT_DIR$/../AOOPpj1/AOOPpj1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../First/First.iml" filepath="$PROJECT_DIR$/../First/First.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../HelloWorld/HelloWorld.iml" filepath="$PROJECT_DIR$/../HelloWorld/HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../MiniLab1/MiniLab1.iml" filepath="$PROJECT_DIR$/../MiniLab1/MiniLab1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Minilab2/Minilab2.iml" filepath="$PROJECT_DIR$/../Minilab2/Minilab2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Minilab4/Minilab4.iml" filepath="$PROJECT_DIR$/../Minilab4/Minilab4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Minilab5/Minilab5.iml" filepath="$PROJECT_DIR$/../Minilab5/Minilab5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Minilab6/Minilab6.iml" filepath="$PROJECT_DIR$/../Minilab6/Minilab6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Minilab7/Minilab7.iml" filepath="$PROJECT_DIR$/../Minilab7/Minilab7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Minilab7FAILURE/Minilab7FAILURE.iml" filepath="$PROJECT_DIR$/../Minilab7FAILURE/Minilab7FAILURE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Minilab8/Minilab8.iml" filepath="$PROJECT_DIR$/../Minilab8/Minilab8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../MinilabSeven/MinilabSeven.iml" filepath="$PROJECT_DIR$/../MinilabSeven/MinilabSeven.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Practice/Practice.iml" filepath="$PROJECT_DIR$/../Practice/Practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Puzzles/Puzzles.iml" filepath="$PROJECT_DIR$/../Puzzles/Puzzles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Testing/Testing.iml" filepath="$PROJECT_DIR$/../Testing/Testing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../gradebook/gradebook.iml" filepath="$PROJECT_DIR$/../gradebook/gradebook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hello world/hello world.iml" filepath="$PROJECT_DIR$/../hello world/hello world.iml" />
+      <module fileurl="file://$PROJECT_DIR$/newproj.iml" filepath="$PROJECT_DIR$/newproj.iml" />
+    </modules>
+  </component>
+</project>
