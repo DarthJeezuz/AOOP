@@ -3,16 +3,19 @@ package noapplet.example;
  * @ author Jesus Oropeza & Dante Lopez
  * @ version 1 (2/26/2023)
  */
+
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Place extends Board{
+public class Check {
     private static int vertCount = 0;
     private static int horizCount = 0;
     private static boolean consecutiveV = false;
     private static boolean consecutiveH = false;
-
-    Place(){}
+    private static char[][] map = Board.getMap();
+    private static Board board = Board.getBoard();
+    Check(){}
     static boolean CheckForWin(boolean p1turn){
         char ch;
         char W = '#';
@@ -26,21 +29,22 @@ public class Place extends Board{
         /**
          * Horizontal & Vertical counts should reset if ch is not consecutive
          */
-        for(int i = 0; i < board.length; i++){
-            for(int j = 0; j < board.length; j++) {
+
+        for(int i = 0; i < board.size(); i++){
+            for(int j = 0; j < board.size(); j++) {
                 // Checking for available moves
-                if(board[i][j] == '.'){
+                if(map[i][j] == '.'){
                     count++;
                 }
                 // check horizontal
-                if (board[i][j] == ch){
+                if (map[i][j] == ch){
                     horizCount++;
                     consecutiveH = true;
                     HIlst.add(i);
                     HJlst.add(j);
                     if(horizCount == 5){
                         for(int k = 0; k < HIlst.size(); k++){
-                            board[HIlst.get(k)][HJlst.get(k)] = W;
+                            map[HIlst.get(k)][HJlst.get(k)] = W;
                         }
                         return true;
                     }
@@ -52,14 +56,14 @@ public class Place extends Board{
                     horizCount = 0;
                 }
                 // check vertical
-                if(board[j][i] == ch){
+                if(map[j][i] == ch){
                     vertCount++;
                     consecutiveV = true;
                     VIlst.add(i);
                     VJlst.add(j);
                     if(vertCount == 5){
                         for(int k = 0; k < VIlst.size(); k++){
-                            board[VJlst.get(k)][VIlst.get(k)] = W;
+                            map[VJlst.get(k)][VIlst.get(k)] = W;
                         }
                         return true;
                     }
@@ -72,22 +76,22 @@ public class Place extends Board{
                 }
             }
         }
-        if(count == 0){Board.declareDraw();}
+        if(count == 0){/*Board.declareDraw();*/}
 
         /**The two following diagonal checks, simultaneously view five spaces
          * that could possibly yield a diagonal win.
          * check diagonal from bottom-left to top-right (i.e. / )
          */
-        for(int i = 4; i < board.length; i++){
-            for(int j = 0; j < board.length-4; j++){
+        for(int i = 4; i < board.size(); i++){
+            for(int j = 0; j < board.size()-4; j++){
 //                For troubleshooting
 //                System.out.println("/ y:" + i + " x:" + j + "\ty:" + (i-1) + " x:" + (j+1) + "\ty:" + (i-2) + " x:" + (j+2) + "\ty:" + (i-3) + " x:" + (j+3) + "\ty:" + (i-4) + " x:" + (j+4));
-                if(board[i][j] == ch && board[i-1][j+1] == ch && board[i-2][j+2] == ch && board[i-3][j+3] == ch && board[i-4][j+4] == ch){
-                    board[i][j] = W;
-                    board[i-1][j+1] = W;
-                    board[i-2][j+2] = W;
-                    board[i-3][j+3] = W;
-                    board[i-4][j+4] = W;
+                if(map[i][j] == ch && map[i-1][j+1] == ch && map[i-2][j+2] == ch && map[i-3][j+3] == ch && map[i-4][j+4] == ch){
+                    map[i][j] = W;
+                    map[i-1][j+1] = W;
+                    map[i-2][j+2] = W;
+                    map[i-3][j+3] = W;
+                    map[i-4][j+4] = W;
                     return true;
                 }
             }
@@ -95,16 +99,16 @@ public class Place extends Board{
         /**
          * check diagonal from top-left to bottom-right (i.e. \ )
          */
-        for(int i = 0; i < board.length - 4; i++){
-            for(int j = 0; j < board.length - 4; j++){
+        for(int i = 0; i < board.size() - 4; i++){
+            for(int j = 0; j < board.size() - 4; j++){
 //                For troubleshooting
 //                System.out.println("\\ y:" + i + " x:" + j + "\ty:" + (i+1) + " x:" + (j+1) + "\ty:" + (i+2) + " x:" + (j+2) + "\ty:" + (i+3) + " x:" + (j+3) + "\ty:" + (i+4) + " x:" + (j+4));
-                if(board[i][j] == ch && board[i+1][j+1] == ch && board[i+2][j+2] == ch && board[i+3][j+3] == ch && board[i+4][j+4] == ch){
-                    board[i][j] = W;
-                    board[i+1][j+1] = W;
-                    board[i+2][j+2] = W;
-                    board[i+3][j+3] = W;
-                    board[i+4][j+4] = W;
+                if(map[i][j] == ch && map[i+1][j+1] == ch && map[i+2][j+2] == ch && map[i+3][j+3] == ch && map[i+4][j+4] == ch){
+                    map[i][j] = W;
+                    map[i+1][j+1] = W;
+                    map[i+2][j+2] = W;
+                    map[i+3][j+3] = W;
+                    map[i+4][j+4] = W;
                     return true;
                 }
             }

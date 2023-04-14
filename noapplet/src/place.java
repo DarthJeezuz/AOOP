@@ -31,7 +31,7 @@ public class place {
         return i;
     }
     public String toString(){
-        String out = String.format("Place [x=%d, y=%d]", x, y);
+        String out = String.format("Check [x=%d, y=%d]", x, y);
         return out;
     }
     public static void main(String[] args){

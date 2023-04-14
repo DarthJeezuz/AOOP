@@ -13,8 +13,9 @@ import java.util.List;
  */
 public class Board {
 
-    char[][] board;
-    int size;
+
+    protected static char[][] board;
+    int size = 15;
     /** Create a new board of the default size. */
     public Board() {
     }
@@ -56,19 +57,19 @@ public class Board {
     }
 
     /**
-     * Place a stone for the specified player at a specified
+     * Check a stone for the specified player at a specified
      * intersection (x, y) on the board.
      *
      * @param x 0-based column (vertical) index
      * @param y 0-based row (horizontal) index
      * @param player Player whose stone is to be placed
      */
-    public void placeStone(int x, int y, Player player) {
+    public static void placeStone(int x, int y, Player player) {
         if(y > board.length || x > board.length){
             // location does not exist
             System.out.println("That is not a valid coordinate");
         }
-        /** Place Stone */
+        /** Check Stone */
         if(isEmpty(x,y)){
             board[x][y] = player.Pstone();
         }
@@ -81,7 +82,7 @@ public class Board {
      * @param x 0-based column (vertical) index
      * @param y 0-based row (horizontal) index
      */
-    public boolean isEmpty(int x, int y) {
+    public static boolean isEmpty(int x, int y) {
         if(board[x][y] == '.'){
             return true;
         }
@@ -243,7 +244,7 @@ public class Board {
 
     /** Return the winning row. For those who are not familiar with
      * the Iterable interface, you may return an object of
-     * List<Place>. */
+     * List<Check>. */
     public Iterable<Place> winningRow() {
         return null;
     }
@@ -272,7 +273,12 @@ public class Board {
             this.y = y;
         }
 
+
         // other methods if needed ...
+    }
+
+    public static char[][] getBoard(){
+        return board;
     }
 }
 
